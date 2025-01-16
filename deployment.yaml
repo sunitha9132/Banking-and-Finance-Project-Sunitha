@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: bankingandfinance
+  name: banking 
 spec:
   replicas: 1  
   selector:
     matchLabels:
-      app: bankingandfinance
+      app: banking 
   template:
     metadata:
       labels:
-        app: bankingandfinance
+        app: banking
     spec:
       containers:
-        - name: bankingandfinance
+        - name: banking
           image: sunitha586/bankingandfinance-sunitha:banking_img
           ports:
           - containerPort: 8081
@@ -22,10 +22,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: bankingandfinance
+  name: banking
 spec:
   selector:
-    app: bankingandfinance
+    app: banking
   type: NodePort  
   ports:
     - port: 80         
