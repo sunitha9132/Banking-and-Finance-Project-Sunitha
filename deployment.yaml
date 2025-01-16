@@ -22,10 +22,10 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: healthcare
+  name: bankingandfinance
 spec:
   selector:
-    app: healthcare
+    app: bankingandfinance
   type: NodePort  
   ports:
     - port: 80         
